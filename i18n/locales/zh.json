@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "aliu 的个人博客",
+    "description": "记录学习、开发和成长",
+    "siteName": "aliu"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于"
+  },
+  "home": {
+    "greeting": "你好，我是 aliu。",
+    "subtitle": "正在学习和成长的开发者",
+    "description": "这里会记录我的编程学习、项目实践和一些成长笔记。"
+  },
+  "about": {
+    "title": "关于我",
+    "content": "我是 aliu，一名正在持续学习的开发者。欢迎交流，也欢迎 Star、Fork 我的项目。"
+  },
+  "footer": {
+    "builtWith": "Built with GitHub Pages"
+  },
+  "error": {
+    "title": "出错了",
+    "description": "页面加载时遇到了问题",
+    "retry": "重试"
+  },
+  "loading": {
+    "text": "加载中..."
+  }
+}

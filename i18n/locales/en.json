@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "aliu's Blog",
+    "description": "Recording learning, development and growth",
+    "siteName": "aliu"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  },
+  "home": {
+    "greeting": "Hi, I'm aliu.",
+    "subtitle": "A developer learning and growing",
+    "description": "Recording my programming journey, projects, and growth notes."
+  },
+  "about": {
+    "title": "About Me",
+    "content": "I'm aliu, a developer continuously learning and growing. Feel free to reach out, and welcome to Star or Fork my projects."
+  },
+  "footer": {
+    "builtWith": "Built with GitHub Pages"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An error occurred while loading the page",
+    "retry": "Retry"
+  },
+  "loading": {
+    "text": "Loading..."
+  }
+}

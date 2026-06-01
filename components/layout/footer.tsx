@@ -1,7 +1,8 @@
 import { getTranslations } from 'next-intl/server';
+import { type Locale } from '@/i18n/config';
 
-export async function Footer() {
-  const t = await getTranslations('footer');
+export async function Footer({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: 'footer' });
 
   return (
     <footer className="border-t py-8">

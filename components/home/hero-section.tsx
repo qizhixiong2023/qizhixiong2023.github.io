@@ -1,7 +1,8 @@
 import { getTranslations } from 'next-intl/server';
+import { type Locale } from '@/i18n/config';
 
-export async function HeroSection() {
-  const t = await getTranslations('home');
+export async function HeroSection({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: 'home' });
 
   return (
     <section className="border-b bg-gradient-to-b from-background to-muted/20 py-20">

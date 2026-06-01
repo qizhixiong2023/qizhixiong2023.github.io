@@ -1,20 +1,9 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Geist, Geist_Mono } from 'next/font/google';
-import { locales, isValidLocale } from '@/i18n/config';
+import { locales, isValidLocale, type Locale } from '@/i18n/config';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -51,15 +40,18 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  setRequestLocale(locale);
+  const validLocale: Locale = locale;
+
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang={locale}>
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
+          <Header locale={validLocale} />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <Footer locale={validLocale} />
         </NextIntlClientProvider>
       </body>
     </html>

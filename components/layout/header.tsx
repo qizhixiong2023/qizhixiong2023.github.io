@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { getTranslations, getLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import { type Locale } from '@/i18n/config';
 import { SITE_NAME, GITHUB_URL } from '@/lib/constants';
 import { LanguageSwitcher } from './language-switcher';
 
-export async function Header() {
-  const locale = await getLocale();
-  const t = await getTranslations('nav');
+export async function Header({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: 'nav' });
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-sm">

@@ -13,18 +13,22 @@
     "subtitle": "A developer learning and growing",
     "description": "Recording my programming journey, projects, and growth notes.",
     "hero": {
-      "eyebrow": "Personal index",
-      "title": "Turning ideas into interfaces I want.",
-      "description": "I am aliu, a designer and developer who enjoys moving ideas from concept into usable products with quiet, lasting interfaces.",
-      "identity": "Design and development slowly meet in the same person.",
-      "direction": "Focused on product expression, frontend craft, and a more complete personal language.",
-      "learning": "Exploring frontend expression and product implementation",
+      "eyebrow": "Full-stack developer / UI lover",
+      "title": "I turn ideas into products and enjoy the creative process behind every line of code.",
+      "description": "I am aliu. I like working from APIs, data, and business logic all the way to frontend interaction and visual details. The product should be stable, the experience should feel smooth, and the page should be good enough to stay with.",
+      "identity": "Building full-stack skills while sharpening my eye for design.",
+      "direction": "I want to build products that stand strong from architecture, APIs, and interaction to visual design, making complex logic stable and pages beautiful enough.",
+      "learning": "Continuing to go deeper into frontend expression and product implementation",
       "blog": "Blog"
+    },
+    "techStack": {
+      "title": "Tech Stack",
+      "description": "This is the technology map I have mastered: from frontend interfaces and backend services to databases and toolchains, these are the capabilities I can use to solve problems and complete products."
     }
   },
   "about": {
     "title": "About Me",
-    "content": "I'm aliu, a developer continuously learning and growing. Feel free to reach out, and welcome to Star or Fork my projects."
+    "content": "I am aliu, a developer who keeps learning. Feel free to connect, and welcome to Star or Fork my projects."
   },
   "footer": {
     "builtWith": "Built with GitHub Pages"

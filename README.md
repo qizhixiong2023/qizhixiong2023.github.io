@@ -102,7 +102,3 @@ bun run build
 
 # 输出目录：out/
 ```
-
-## License
-
-MIT

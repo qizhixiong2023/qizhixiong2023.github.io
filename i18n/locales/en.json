@@ -52,7 +52,9 @@
     "content": "I am aliu, a developer who keeps learning. Feel free to connect, and welcome to Star or Fork my projects."
   },
   "footer": {
-    "builtWith": "Built with GitHub Pages"
+    "description": "Collecting learning, projects, and design thinking while continuing to build products that feel stable, smooth, and beautiful.",
+    "home": "Home",
+    "about": "About"
   },
   "error": {
     "title": "Something went wrong",

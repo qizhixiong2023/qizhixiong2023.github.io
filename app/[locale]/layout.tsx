@@ -24,6 +24,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: `%s | ${t('siteName')}`,
     },
     description: t('description'),
+    icons: {
+      icon: '/icon.jpg',
+      shortcut: '/icon.jpg',
+      apple: '/icon.jpg',
+    },
   };
 }
 

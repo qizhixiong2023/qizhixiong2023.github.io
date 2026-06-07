@@ -8,6 +8,12 @@ import { type Locale } from '@/i18n/config';
 import { GITHUB_URL } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
+const heroButtonClassName = 'h-16 rounded-2xl px-6 text-base';
+const secondaryButtonClassName = cn(
+  heroButtonClassName,
+  'border-border bg-card/70 hover:bg-accent/70'
+);
+
 export async function HeroSection({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'home.hero' });
 
@@ -36,7 +42,8 @@ export async function HeroSection({ locale }: { locale: Locale }) {
               rel="noopener noreferrer"
               className={cn(
                 buttonVariants({ variant: 'default', size: 'lg' }),
-                'h-16 rounded-2xl bg-primary px-6 text-base shadow-[0_16px_40px_rgb(120_80_70_/_0.18)] hover:bg-primary/90'
+                heroButtonClassName,
+                'bg-primary shadow-[0_16px_40px_rgb(120_80_70_/_0.18)] hover:bg-primary/90'
               )}
             >
               GitHub
@@ -45,7 +52,7 @@ export async function HeroSection({ locale }: { locale: Locale }) {
               href="#"
               className={cn(
                 buttonVariants({ variant: 'outline', size: 'lg' }),
-                'h-16 rounded-2xl border-border bg-card/70 px-6 text-base hover:bg-accent/70'
+                secondaryButtonClassName
               )}
             >
               Gitee
@@ -54,7 +61,7 @@ export async function HeroSection({ locale }: { locale: Locale }) {
               href={`/${locale}/about`}
               className={cn(
                 buttonVariants({ variant: 'outline', size: 'lg' }),
-                'h-16 rounded-2xl border-border bg-card/70 px-6 text-base hover:bg-accent/70'
+                secondaryButtonClassName
               )}
             >
               {t('blog')}

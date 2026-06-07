@@ -9,16 +9,11 @@
     "about": "About"
   },
   "home": {
-    "greeting": "Hi, I'm aliu.",
-    "subtitle": "A developer learning and growing",
-    "description": "Recording my programming journey, projects, and growth notes.",
     "hero": {
       "eyebrow": "Full-stack developer / UI lover",
       "title": "I turn ideas into products and enjoy the creative process behind every line of code.",
       "description": "I am aliu. I like working from APIs, data, and business logic all the way to frontend interaction and visual details. The product should be stable, the experience should feel smooth, and the page should be good enough to stay with.",
       "identity": "Building full-stack skills while sharpening my eye for design.",
-      "direction": "I want to build products that stand strong from architecture, APIs, and interaction to visual design, making complex logic stable and pages beautiful enough.",
-      "learning": "Continuing to go deeper into frontend expression and product implementation",
       "blog": "Blog"
     },
     "techStack": {
@@ -60,8 +55,5 @@
     "title": "Something went wrong",
     "description": "An error occurred while loading the page",
     "retry": "Retry"
-  },
-  "loading": {
-    "text": "Loading..."
   }
 }

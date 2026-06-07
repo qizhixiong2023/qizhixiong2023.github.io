@@ -4,6 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 
 import { cn } from '@/lib/utils';
 
+const techItemClassName = 'tech-stack-star rounded-full border border-white/70 text-foreground';
+const desktopTechItemClassName = cn(techItemClassName, 'absolute px-6 py-3 text-lg');
+const mobileTechItemClassName = cn(techItemClassName, 'bg-white/76 px-4 py-2 text-base');
+
 const techItems = [
   { name: 'Next.js', className: 'left-[4%] top-[18%] bg-white/76' },
   { name: 'React', className: 'left-[24%] top-[5%] bg-[oklch(0.92_0.04_38_/_0.82)]' },
@@ -50,10 +54,11 @@ export function TechStackCloud() {
           isActive && 'tech-stack-space-active'
         )}
       >
-        {techItems.map((item) => (
+        {techItems.map((item, index) => (
           <span
             key={item.name}
-            className={`tech-stack-star absolute rounded-full border border-white/70 px-6 py-3 text-lg text-foreground ${item.className}`}
+            className={cn(desktopTechItemClassName, item.className)}
+            style={{ animationDelay: `${index * 2}s` }}
           >
             {item.name}
           </span>
@@ -66,10 +71,11 @@ export function TechStackCloud() {
           isActive && 'tech-stack-space-active'
         )}
       >
-        {techItems.map((item) => (
+        {techItems.map((item, index) => (
           <span
             key={item.name}
-            className="tech-stack-star rounded-full border border-white/70 bg-white/76 px-4 py-2 text-base text-foreground"
+            className={mobileTechItemClassName}
+            style={{ animationDelay: `${index * 2}s` }}
           >
             {item.name}
           </span>

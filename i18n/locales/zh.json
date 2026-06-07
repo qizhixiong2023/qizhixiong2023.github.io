@@ -9,16 +9,11 @@
     "about": "关于"
   },
   "home": {
-    "greeting": "你好，我是 aliu。",
-    "subtitle": "正在学习和成长的开发者",
-    "description": "这里会记录我的编程学习、项目实践和一些成长笔记。",
     "hero": {
       "eyebrow": "Full-stack developer / UI lover",
       "title": "把想法写成产品，享受每一行代码的创造过程",
       "description": "我是 aliu，喜欢从接口、数据、业务逻辑一路做到前端交互和视觉细节。功能要稳定，体验要顺手，页面也得让人愿意多看两眼。",
       "identity": "正在做全栈，也一直在练审美。",
-      "direction": "我想做的是从架构、接口、交互到视觉都能站得住的产品，把复杂逻辑做稳，也把页面做得足够漂亮",
-      "learning": "正在继续深入前端表达与产品实现",
       "blog": "博客"
     },
     "techStack": {
@@ -60,8 +55,5 @@
     "title": "出错了",
     "description": "页面加载时遇到了问题",
     "retry": "重试"
-  },
-  "loading": {
-    "text": "加载中..."
   }
 }

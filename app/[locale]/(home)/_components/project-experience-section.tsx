@@ -1,6 +1,7 @@
 import { ClipboardCheck, ShoppingCart } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
+import { Card } from '@/components/ui/card';
 import { type Locale } from '@/i18n/config';
 import { cn } from '@/lib/utils';
 
@@ -9,6 +10,15 @@ type ProjectItem = {
   description: string;
   tags: string[];
 };
+
+const sectionTitleClassName =
+  'text-center font-serif text-4xl leading-none font-semibold tracking-normal text-foreground sm:text-5xl';
+const slideClassName =
+  'opacity-0 transition-all duration-[1200ms] ease-out will-change-transform group-hover/projects:translate-x-0 group-hover/projects:opacity-100';
+const imageCardClassName =
+  'flex aspect-[1.18] items-center justify-center rounded-3xl py-0 shadow-[0_24px_70px_rgb(120_120_140_/_0.11)] ring-0';
+const tagClassName =
+  'rounded-2xl border border-border bg-card/72 px-5 py-3 font-mono text-sm text-foreground shadow-[0_12px_30px_rgb(120_120_140_/_0.06)]';
 
 const projectStyles = [
   {
@@ -32,9 +42,7 @@ export async function ProjectExperienceSection({ locale }: { locale: Locale }) {
   return (
     <section className="group/projects overflow-x-clip py-10 sm:py-14">
       <div className="container mx-auto max-w-6xl px-4">
-        <h2 className="text-center font-serif text-4xl leading-none font-semibold tracking-normal text-foreground sm:text-5xl">
-          {t('title')}
-        </h2>
+        <h2 className={sectionTitleClassName}>{t('title')}</h2>
 
         <div className="mt-12 space-y-14 sm:mt-16 lg:space-y-12">
           {projects.map((project, index) => {
@@ -44,8 +52,6 @@ export async function ProjectExperienceSection({ locale }: { locale: Locale }) {
             const slideFromClassName = isReversed
               ? '-translate-x-[min(58vw,42rem)]'
               : 'translate-x-[min(58vw,42rem)]';
-            const slideToClassName =
-              'group-hover/projects:translate-x-0 group-hover/projects:opacity-100';
 
             return (
               <article
@@ -55,24 +61,18 @@ export async function ProjectExperienceSection({ locale }: { locale: Locale }) {
                   isReversed && 'lg:[&>*:first-child]:order-2'
                 )}
               >
-                <div
+                <Card
                   className={cn(
-                    'flex aspect-[1.18] items-center justify-center rounded-3xl border border-border/80 opacity-0 shadow-[0_24px_70px_rgb(120_120_140_/_0.11)] transition-all duration-[1200ms] ease-out will-change-transform',
+                    imageCardClassName,
                     slideFromClassName,
-                    slideToClassName,
+                    slideClassName,
                     style.imageClassName
                   )}
                 >
                   <Icon className={cn('h-20 w-20 stroke-[1.6]', style.iconClassName)} />
-                </div>
+                </Card>
 
-                <div
-                  className={cn(
-                    'opacity-0 transition-all duration-[1200ms] ease-out will-change-transform lg:px-2',
-                    slideFromClassName,
-                    slideToClassName
-                  )}
-                >
+                <div className={cn(slideClassName, slideFromClassName, 'lg:px-2')}>
                   <h3 className="font-serif text-3xl leading-tight font-semibold tracking-normal text-foreground sm:text-4xl">
                     {project.title}
                   </h3>
@@ -81,10 +81,7 @@ export async function ProjectExperienceSection({ locale }: { locale: Locale }) {
                   </p>
                   <div className="mt-7 flex flex-wrap gap-3">
                     {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-2xl border border-border bg-card/72 px-5 py-3 font-mono text-sm text-foreground shadow-[0_12px_30px_rgb(120_120_140_/_0.06)]"
-                      >
+                      <span key={tag} className={tagClassName}>
                         {tag}
                       </span>
                     ))}

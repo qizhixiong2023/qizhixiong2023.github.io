@@ -24,6 +24,27 @@
     "techStack": {
       "title": "Tech Stack",
       "description": "This is the technology map I have mastered: from frontend interfaces and backend services to databases and toolchains, these are the capabilities I can use to solve problems and complete products."
+    },
+    "projects": {
+      "title": "Project Experience",
+      "items": [
+        {
+          "title": "Yishen Mini Program",
+          "description": "An enterprise approval workflow management system with custom approval flows, multi-level review, real-time notifications, and a smoother approval experience.",
+          "tags": ["WeChat Mini Program Native", "Node.js", "Cloud Database"]
+        },
+        {
+          "title": "E-commerce System",
+          "description": "A complete e-commerce solution covering product management, order processing, payment integration, and user accounts, with access across PC and mobile platforms.",
+          "tags": ["Vue", "Spring Boot", "MySQL"]
+        }
+      ]
+    },
+    "learning": {
+      "title": "Continuous Learning",
+      "cardTitle": "Technology Exploration",
+      "description": "I am continuing to go deeper into Next.js while thinking about how to bring more complete design expression into real products.",
+      "tag": "Next.js"
     }
   },
   "about": {
